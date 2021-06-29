@@ -2,7 +2,7 @@ import Cocoa
 //import Foundation
 
 //  part1
-print("L006   hi printfunc1")
+print("L005   hi printfunc1")
 
 //  part2
 let maximumNumberOfLoginAttempts = 3
