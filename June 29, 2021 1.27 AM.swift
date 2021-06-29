@@ -133,7 +133,7 @@ if ageConvertedToInt != nil {
 } else {
     print("L134   Age is empty")
 }
-// no se puede imprimir con ! si valor es nil
+// can't use ! to print if its value is nil
 
 //  part13
 
