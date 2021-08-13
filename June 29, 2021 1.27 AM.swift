@@ -2,7 +2,7 @@ import Cocoa
 //import Foundation
 
 //  part1
-print("L005   hi printfunc1")
+print("hi printfunc1")
 
 //  part2
 let maximumNumberOfLoginAttempts = 3
@@ -10,25 +10,25 @@ var currentLoginAttempt = 0
 var varDoub1 = 0.0, varDoub2 = 0.0, varDoub3 = 0.0
 
 //  part3
-//      Type annotation = take var/constant, assign an explicit type
+//      Type annotation = hold var/constant, assign an explicit type
 var welcomeMessage: String
 welcomeMessage = "hi"
 
 var red, green, blue: Double
 let π = 3.1415926
-let 你好: String //unused
-let 👽: String = "L020   alien let"
+let 你好: String
+let 👽: String = "👽👽 alien let"
 print(👽)
 
 //  part4
-print("L024   current attempt \(currentLoginAttempt) out of \(maximumNumberOfLoginAttempts)")
+print("current attempt \(currentLoginAttempt) out of \(maximumNumberOfLoginAttempts)")
 
 //  part5
     // comm
     /*
-    multilin
+    block
         /* */
-    multilin
+        block
     */
 
 // part6
@@ -36,7 +36,7 @@ let age = 31
 let minUInt8 = UInt8.min    // 2^0-1
 let maxUInt8 = UInt8.max    // 2^8-1
 
-print("L039   min8bit: \(minUInt8); max8bit: \(maxUInt8)")
+print("min8bit: \(minUInt8); max8bit: \(maxUInt8)")
 
 let float1: Float = 3.1415926
 let πDoub: Double = 3.1415926
@@ -90,9 +90,9 @@ let obviousImmutableStatementBoolNo = false
 private func ageCheck(age: Int) {
     var isAged: Bool
     if age >= 18 {
-        isAged = true; print("L093   So \(isAged) you may come in")
+        isAged = true; print("\(isAged) you may come in")
     } else {
-        isAged = false; print("L095   So \(isAged) you may not come in")
+        isAged = false; print("\(isAged) you may not come in")
     }
 }
 ageCheck(age: 19)
@@ -103,10 +103,10 @@ let (statusCode, statusMsg) = HTTP404Error
 print("L103   HTTP Status Code is \(statusCode)")
 print("L104   HTTP Server Response is \"\(statusMsg)\"")
 
-    //  extraer parte
+    //
 let (statusCodeOnly, _) = HTTP404Error
-print("L108   HTTP Status Code is \(statusCodeOnly). No server response")
-print("L109   HTTP Status Code is \(HTTP404Error.0). \"\(HTTP404Error.1)\"")
+print("HTTP Status Code is \(statusCodeOnly). No server response")
+print("HTTP Status Code is \(HTTP404Error.0). \"\(HTTP404Error.1)\"")
 
 let tuple = ("tupleSub1", "tupleSub2")
 
@@ -116,7 +116,7 @@ print("L114   HTTP Response is \(HTTP200OkNotice.statusCode). \"\(HTTP200OkNotic
 //  part 11
 // nil
 
-    //  nil basically means null (?!?!) - with caveats.
+    //  nil = null (?!?!) - with caveats.
 
 var ageString = "19"
 let ageConvertedToInt = Int(ageString)
@@ -126,12 +126,12 @@ var possibleInt: Int = 404
 
 //  part 12
 if ageConvertedToInt != nil {
-    print("L129   Age isn't empty, \(String(describing: ageConvertedToInt))")
+    print("Age is not empty, \(String(describing: ageConvertedToInt))")
     
     // use exclamation mark to display Optional() Ints, and much more
-    print("L132   Age isn't empty, \(String(describing: ageConvertedToInt!))")
+    print("Age is not empty, \(String(describing: ageConvertedToInt!))")
 } else {
-    print("L134   Age is empty")
+    print("Age is empty")
 }
 // can't use ! to print if its value is nil
 
@@ -177,5 +177,5 @@ do {
 /* asertions for debugging only; preconditions for building & debugging, and in prod */
 
 let invalidValue: Int = -4
-precondition(invalidValue <= 0, "L180   Number is negative, or zero")
+precondition(invalidValue <= 0, "Number is equal to zero or less. Disallowed")
 // does this even work
